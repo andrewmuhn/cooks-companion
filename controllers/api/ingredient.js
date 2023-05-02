@@ -36,6 +36,7 @@ router.put("/:id", async (req, res) => {
       {
         id: req.body.id,
         name: req.body.name,
+        unit: req.body.unit,
       },
       {
         where: {
