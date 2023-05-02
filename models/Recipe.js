@@ -29,7 +29,7 @@ Recipe.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'recipe_ingredient',
+        modelName: 'recipe',
     }
 );
 
