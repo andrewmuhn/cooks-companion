@@ -1,0 +1,95 @@
+
+<script>
+     function pushData() {
+        let view = document.getElementById("view");
+        let newLi = document.createElement("li");
+        
+        let inputText1 = document.getElementById("inputText").value;
+        let inputNumber = document.getElementById("inputNumber").value;
+        let inputFraction = document.getElementById("inputFraction").value;
+        let inputUnit = document.getElementById("inputUnit").value;
+
+        let text = inputText1 + " " + inputNumber + " " + inputFraction + " " + inputText3;
+        let node = document.createTextNode(text);
+        newLi.appendChild(node);
+        view.appendChild(newLi);
+    }
+
+</script>
+
+
+
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{name}}!</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    
+    {{#if recipes.length}}
+    <div class="col-md-6 project-list">
+        <h3>Current Recipes:</h3>
+
+        {{#each recipes as |recipe|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></h4>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    
+    <div class="col-md-6">
+        <h3>Create a New Recipe:</h3>
+
+        <form class="form new-project-form">
+            <div class="form-group">
+                
+                <label for="inputIngredient">Ingredient:</label>
+                <input type="text" name="inputText" id="inputText" />
+                
+                <label for="inputNumber">Number:</label>
+                <input type="number" id="inputNumber" name="inputNumber" />
+                
+                <label for="inputFraction">Fraction:</label>
+                <input type="text" id="inputFraction" name="inputFraction" pattern="\d+/\d+" />
+                
+                <label for="inputUnit">Units:</label>
+                <input list="unitOptions" name="inputUnit" id="inputUnit" />
+                <datalist id="unitOptions">
+                    <option value="oz">
+                    <option value="liters">
+                    <option value="tsp">
+                    <option value="tblsp">
+                </datalist>
+                
+                <label for="recipe_instructions">Instructions:</label>
+                <input class="form-input" type="text" id="recipe_instructions" name="recipe_instructions" />
+                
+                <button onclick="pushData();">Add to list</button>
+                
+                <ul id="view">
+                </ul>
+
+            </div>
+
+            {{!-- <div class="form-group">
+                
+            </div> --}}
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+
+        </form>
+    </div>
+
+    
+</div>
+
+<script src="./js/profile.js"></script>
