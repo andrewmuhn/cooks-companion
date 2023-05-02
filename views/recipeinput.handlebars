@@ -1,0 +1,98 @@
+
+
+
+
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{name}}!</h2>
+    </div>
+</div>
+
+<div class="row mt-4">
+    
+    {{#if recipes.length}}
+    <div class="col-md-6 recipe-list">
+        <h3>Current Recipes:</h3>
+
+        {{#each recipes as |recipe|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></h4>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    
+    <div class="col-md-6">
+        <h3>Create a New Recipe:</h3>
+
+        <form class="form new-recipe-form">
+            <div class="form-group">
+
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" name="recipe-name" id="recipe-name"/>
+
+                <button id="push-recipe-name">Add to list</button>
+                
+                <div id="recipe-ingredients">
+                    <label for="inputIngredient">Ingredient:</label>
+                    <input type="text" name="inputText" id="inputText" />
+                
+                    <label for="inputNumber">Number:</label>
+                    <input type="number" id="inputNumber" name="inputNumber" />
+                
+                    <label for="inputFraction">Fraction:</label>
+                    <input type="text" id="inputFraction" name="inputFraction" pattern="\d+/\d+" />
+                
+                    <label for="inputUnit">Units:</label>
+                    <input list="unitOptions" name="inputUnit" id="inputUnit" />
+                    <datalist id="unitOptions">
+                        <option value="tsp">
+                        <option value="tbsp">
+                        <option value="cup(s)">
+                        <option value="qt">
+                        <option value="gal">
+                        <option value="lb">
+                        <option value="oz">
+                        <option value="pinch">
+                    </datalist>
+                </div>
+                
+                <button id="push-ingred-data">Add to list</button>
+
+                <label for="recipe-instructions">Instructions:</label>
+                <input class="form-input" type="text" id="recipe-steps" name="recipe-steps" />
+
+                <button id="push-step-data">Add to list</button>
+                
+                
+                <ul id="view-recipe-name">
+                </ul>
+             
+                <ul id="view-ingredients">
+                </ul>
+
+                <ul id="view-steps">
+                </ul>
+
+            </div>
+
+            {{!-- <div class="form-group">
+                
+            </div> --}}
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+
+        </form>
+    </div>
+
+    
+</div>
+
+<script src="./js/profile.js"></script>
