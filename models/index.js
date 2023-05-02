@@ -49,4 +49,4 @@ Ingredient.belongsToMany(Recipe, {
 //   foreignKey: 'user_id',
 // });
 
-module.exports = { User, Recipe, Ingredient, Step };
+module.exports = { User, Recipe, Ingredient, Step, RecipeIngredient };

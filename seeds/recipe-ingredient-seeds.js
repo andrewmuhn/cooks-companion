@@ -19,6 +19,7 @@ const recipeIngredientData = [
   },
 ];
 
-const seedRecipeIngredient = () => ProductTag.bulkCreate(recipeIngredientData);
+const seedRecipeIngredient = () =>
+  RecipeIngredient.bulkCreate(recipeIngredientData);
 
 module.exports = seedRecipeIngredient;

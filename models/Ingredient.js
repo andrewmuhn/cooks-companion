@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require("../config/connection");
+const sequelize = require('../config/connection');
 
 class Ingredient extends Model {}
 
@@ -13,15 +13,15 @@ Ingredient.init(
       autoIncrement: true,
     },
     name: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     unit: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     category: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
@@ -30,7 +30,7 @@ Ingredient.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "ingredient",
+    modelName: 'ingredient',
   }
 );
 
