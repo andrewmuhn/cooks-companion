@@ -5,8 +5,11 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
+require('dotenv').config();
 
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(
+  session.Store
+);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,13 +17,17 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: '',
-  cookie: {},
+  secret: process.env.SESS_SECRET,
+  cookie: {
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: false,
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
