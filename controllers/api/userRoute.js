@@ -5,6 +5,29 @@ const { User } = require('../../models');
 // PUT to update user info
 // DELETE User
 
+router.post('/', async (req, res) => {
+    try {
+        const newUserData = await User.create({
+            username: req.body.username,
+            password: req.body.password,
+        });
+        // if (!newUserData) {
+        //     res.status(400).json(
+        //         { message: 'You must enter a valid username and password.' });
+        //     return;
+        // }
+        req.session.save(() => {
+            req.session.logged_in = true,
+            res.status(200).json(newUserData);
+        });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.put()
+
 router.post('/login', async (req, res) => {
     try {
         const userInput = await User.findOne({ where: { username: req.body.username } });
@@ -24,7 +47,7 @@ router.post('/login', async (req, res) => {
             res.json({ user: userInput, message: 'You are now logged in.' });
           });
     } catch (err) {
-        res.status(400).json(err);
+        res.status(500).json(err);
     }
 });
 
