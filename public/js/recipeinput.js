@@ -27,8 +27,6 @@ const pushIngredData = () => {
 };
 
 
-
-
 const pushStepData = () => {
       let viewSteps = document.getElementById("view-steps");
       let newStepsLi = document.createElement("li");
@@ -51,7 +49,7 @@ const newFormHandler = async (event) => {
   const steps = document.querySelector('#recipe-instructions').value.trim();
 
   if (name && ingredients && steps) {
-    const response = await fetch(`/api/recipes`, {
+    const response = await fetch(`/api/recipe`, {
       method: 'POST',
       body: JSON.stringify({ name, ingredients, steps }),
       headers: {
@@ -60,7 +58,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/recipes');
+      document.location.replace('/recipe');
     } else {
       alert('Failed to create recipe');
     }
