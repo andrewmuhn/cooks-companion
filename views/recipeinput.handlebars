@@ -1,21 +1,4 @@
 
-<script>
-     function pushData() {
-        let view = document.getElementById("view");
-        let newLi = document.createElement("li");
-        
-        let inputText1 = document.getElementById("inputText").value.trim();
-        let inputNumber = document.getElementById("inputNumber").value.trim();
-        let inputFraction = document.getElementById("inputFraction").value.trim();
-        let inputUnit = document.getElementById("inputUnit").value.trim();
-
-        let text = inputText1 + " " + inputNumber + " " + inputFraction + " " + inputText3;
-        let node = document.createTextNode(text);
-        newLi.appendChild(node);
-        view.appendChild(newLi);
-    }
-
-</script>
 
 
 
@@ -53,7 +36,9 @@
                 <label for="recipe-name">Recipe Name:</label>
                 <input type="text" name="recipe-name" id="recipe-name"/>
 
-                <button onclick="pushRecipeName()">Add to list</button>
+
+                <button id="push-recipe-name">Add to list</button>
+
                 
                 <div id="recipe-ingredients">
                     <label for="inputIngredient">Ingredient:</label>
@@ -68,19 +53,25 @@
                     <label for="inputUnit">Units:</label>
                     <input list="unitOptions" name="inputUnit" id="inputUnit" />
                     <datalist id="unitOptions">
-                        <option value="oz">
-                        <option value="liters">
+
                         <option value="tsp">
-                        <option value="tblsp">
+                        <option value="tbsp">
+                        <option value="cup(s)">
+                        <option value="qt">
+                        <option value="gal">
+                        <option value="lb">
+                        <option value="oz">
+                        <option value="pinch">
                     </datalist>
                 </div>
                 
-                <button onclick="pushIngredData()">Add to list</button>
+                <button id="push-ingred-data">Add to list</button>
 
                 <label for="recipe-instructions">Instructions:</label>
                 <input class="form-input" type="text" id="recipe-steps" name="recipe-steps" />
 
-                <button onclick="pushStepData()">Add to list</button>
+                <button id="push-step-data">Add to list</button>
+
                 
                 
                 <ul id="view-recipe-name">
