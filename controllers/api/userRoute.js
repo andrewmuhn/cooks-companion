@@ -70,6 +70,7 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// DELETE A USER
 router.delete('/:id', async (req, res) => {
     try {
         const userData = await User.destroy({
