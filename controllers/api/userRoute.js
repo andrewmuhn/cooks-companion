@@ -1,14 +1,12 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// POST new User
-// PUT to update user info
-// DELETE User
-
+// CREATE A NEW USER
 router.post('/', async (req, res) => {
     try {
         const newUserData = await User.create({
-            username: req.body.username,
+            name: req.body.name,
+            email: req.body.email,
             password: req.body.password,
         });
         // if (!newUserData) {
@@ -26,8 +24,20 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put()
+// UPDATE USER DATA
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedUser = await User.update(
+        {
+            where: { id: req.params.id },
+        })
+        return res.json(updatedUser);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
+// INITIAL LOGIN
 router.post('/login', async (req, res) => {
     try {
         const userInput = await User.findOne({ where: { username: req.body.username } });
@@ -51,6 +61,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// LOGOUT
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {res.status(204).end();});
