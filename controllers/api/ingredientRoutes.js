@@ -35,9 +35,9 @@ router.put("/:id", withAuth, async (req, res) => {
   try {
     const updateIngredient = await Ingredient.update(
       {
-        id: req.body.id,
         name: req.body.name,
         unit: req.body.unit,
+        category: req.body.category,
       },
       {
         where: {
