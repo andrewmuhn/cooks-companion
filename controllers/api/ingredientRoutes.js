@@ -58,6 +58,8 @@ router.delete("/:id", withAuth, async (req, res) => {
         id: req.params.id,
       },
     });
+    // added the response -zach
+    res.status(200).json({ message: 'Success' });
   } catch (err) {
     res.status(500).json(err);
   }
