@@ -17,7 +17,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const allRecipeData = await Recipe.findAll();
 
     const recipes = allRecipeData.map((recipe) =>
-      project.get({ plain: true })
+      recipe.get({ plain: true })
     );
 
     res.render('profile', {
