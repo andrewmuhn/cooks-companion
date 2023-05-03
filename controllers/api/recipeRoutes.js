@@ -1,13 +1,14 @@
 const router = require('express').Router();
 const { PassThrough } = require('stream');
 const { Recipe, User, Ingredient, RecipeIngredient, Step } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
       include: [
         {
-         model: User 
+          model: User 
         },
         {
           model: Ingredient,
@@ -24,7 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
@@ -54,7 +55,7 @@ router.get('/:id', async (req, res) => {
 
 
 // got this from the module 13 challenge 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Recipe.create(req.body)
     .then((recipe) => {
       if (req.body.ingredientIds.length) {
@@ -75,7 +76,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Recipe.update(req.body, {
     where: {
       id: req.params.id,
@@ -110,7 +111,7 @@ router.put('/:id', (req, res) => {
     });  
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {
