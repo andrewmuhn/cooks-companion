@@ -3,9 +3,11 @@ const { Recipe } = require('../models');
 const recipeData = [
   {
     name: 'Simple Macaroni and Cheese',
+    user_id: 2,
   },
   {
     name: 'Fire Quesadilla',
+    user_id: 1,
   },
 ];
 
