@@ -4,18 +4,26 @@ const recipeIngredientData = [
   {
     recipe_id: 1,
     ingredient_id: 1,
+    unit: 'oz',
+    amount: 2,
   },
   {
     recipe_id: 1,
     ingredient_id: 2,
+    unit: 'oz',
+    amount: 16,
   },
   {
     recipe_id: 2,
     ingredient_id: 1,
+    unit: 'oz',
+    amount: 3,
   },
   {
     recipe_id: 2,
     ingredient_id: 3,
+    unit: 'num',
+    amount: 1,
   },
 ];
 
