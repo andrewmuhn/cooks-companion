@@ -18,6 +18,10 @@ Recipe.hasMany(Step, {
   onDelete: 'CASCADE',
 });
 
+Recipe.hasMany(RecipeIngredient, {
+  foreignKey: 'recipe_id',
+});
+
 Step.belongsTo(Recipe, {
   foreignKey: 'recipe_id',
 });
@@ -28,7 +32,7 @@ Recipe.belongsToMany(Ingredient, {
     model: RecipeIngredient,
     unique: false,
   },
-  as: 'recipe_ingredients',
+  as: 'ingredients',
 });
 
 Ingredient.belongsToMany(Recipe, {

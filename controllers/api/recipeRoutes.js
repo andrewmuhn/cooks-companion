@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
           model: Ingredient,
           through: RecipeIngredient,
           // attributes: ['unit', 'amount'],
-          as: 'recipe_ingredients',
+          as: 'ingredients',
         },
         {
           model: Step,
