@@ -29,31 +29,30 @@ router.get('/profile', withAuth, async (req, res) => {
       ],
     });
 
-
     const user = userData.get({ plain: true });
     console.log(user);
     res.render('profile', {
       ...user,
       logged_in: true,
-
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/recipe/:id', withAuth, async (req, res) => {
+router.get('/recipes/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
         {
-          model: RecipeIngredient,
-          attributes: ['units', 'amount'],
+          model: User,
+          attributes: ['name'],
         },
         {
           model: Ingredient,
           through: RecipeIngredient,
-          attributes: ['name'],
+          // attributes: ['unit', 'amount'],
+          as: 'recipe_ingredients',
         },
         {
           model: Step,
@@ -64,14 +63,19 @@ router.get('/recipe/:id', withAuth, async (req, res) => {
 
     const recipe = recipeData.get({ plain: true });
 
-    const allRecipeData = await Recipe.findAll();
-
-    const allRecipes = allRecipeData.map((recipe) =>
-      recipe.get({ plain: true })
-    );
-    res.render('profile', {
-      ...allRecipes,
-      ...recipe,
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        {
+          model: Recipe,
+        },
+      ],
+    });
+    console.log(recipe);
+    const user = userData.get({ plain: true });
+    res.render('recipedisplay', {
+      ...user,
+      recipe,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
