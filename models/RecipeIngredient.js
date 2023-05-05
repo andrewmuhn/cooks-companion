@@ -17,14 +17,22 @@ RecipeIngredient.init(
       references: {
         model: 'recipe',
         key: 'id',
-      }
+      },
     },
     ingredient_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'ingredient',
         key: 'id',
-      }
+      },
+    },
+    unit: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    amount: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
     },
   },
   {

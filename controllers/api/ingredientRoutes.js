@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Ingredient } = require("../../models");
+const withAuth = require('../../utils/auth')
 
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const newIngredientData = await Ingredient.create({
       name: req.body.name,
@@ -16,7 +17,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const dbIngredientData = await Ingredient.findByPk(req.params.id);
 
@@ -30,13 +31,13 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const updateIngredient = await Ingredient.update(
       {
-        id: req.body.id,
         name: req.body.name,
         unit: req.body.unit,
+        category: req.body.category,
       },
       {
         where: {
@@ -50,13 +51,15 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     await Ingredient.destroy({
       where: {
         id: req.params.id,
       },
     });
+    // added the response -zach
+    res.status(200).json({ message: 'Success' });
   } catch (err) {
     res.status(500).json(err);
   }

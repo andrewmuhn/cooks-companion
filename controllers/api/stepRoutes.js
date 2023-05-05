@@ -1,7 +1,8 @@
-const router = require("express").Router();
-const { Step } = require("../../models");
+const router = require('express').Router();
+const { Step } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.post("/", async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newStepData = await Step.create({
       step: req.body.step,
@@ -37,7 +38,7 @@ router.post("/", async (req, res) => {
 //   }
 // });
 
-router.put("/:id", async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const updateStep = await Step.update(
       {
@@ -55,13 +56,14 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     await Step.destroy({
       where: {
         id: req.params.id,
       },
     });
+    res.status(200).json({ message: 'successfully deleted' });
   } catch (err) {
     res.status(500).json(err);
   }
