@@ -47,23 +47,28 @@ router.get('/recipe/:id', withAuth, async (req, res) => {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
         {
-          model: RecipeIngredients,
+          model: RecipeIngredient,
           attributes: ['units', 'amount'],
         },
         {
-          model: Ingredients,
-          through: RecipeIngredients,
+          model: Ingredient,
+          through: RecipeIngredient,
           attributes: ['name'],
+        },
+        {
+          model: Step,
+          attributes: ['step'],
         },
       ],
     });
+
+    const recipe = recipeData.get({ plain: true });
+    
     const allRecipeData = await Recipe.findAll();
 
     const allRecipes = allRecipeData.map((recipe) =>
-      project.get({ plain: true })
+      recipe.get({ plain: true })
     );
-
-    const recipe = recipeData.get({ plain: true });
     res.render('profile', {
       ...allRecipes,
       ...recipe,
