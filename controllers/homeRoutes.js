@@ -20,13 +20,6 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
-<<<<<<< HEAD
-    const allRecipeData = await Recipe.findAll();
-
-    const recipes = allRecipeData.map((recipe) =>
-      recipe.get({ plain: true })
-    );
-=======
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [
@@ -35,13 +28,14 @@ router.get('/profile', withAuth, async (req, res) => {
         },
       ],
     });
->>>>>>> 5ff87ddebc1c60784c6d96b508da804f5ea6e7cd
+
 
     const user = userData.get({ plain: true });
     console.log(user);
     res.render('profile', {
       ...user,
       logged_in: true,
+
     });
   } catch (err) {
     res.status(500).json(err);
@@ -84,7 +78,27 @@ router.get('/recipe/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+router.get('/recipe_input', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        {
+          model: Recipe,
+        },
+      ],
+    });
 
+    const user = userData.get({ plain: true });
+    console.log(user);
+    res.render('recipeinput', {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');
