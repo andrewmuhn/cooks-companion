@@ -32,9 +32,9 @@ router.get('/profile', withAuth, async (req, res) => {
     const recipes = allRecipeData.map((recipe) =>
       recipe.get({ plain: true })
     );
-
+console.log(recipes);
     res.render('profile', {
-      ...recipes,
+      recipes,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

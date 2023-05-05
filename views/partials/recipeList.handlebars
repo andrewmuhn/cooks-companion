@@ -1,0 +1,18 @@
+<div class="row mt-4">
+
+    {{#if recipes.length}}
+    <div class="col-md-6 recipe-list">
+        <h3>Saved Recipes:</h3>
+
+        {{#each recipes as |recipe|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h3><a href="/recipes/{{recipe.id}}">{{recipe.name}}</a></h3>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
