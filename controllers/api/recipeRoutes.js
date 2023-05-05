@@ -91,7 +91,11 @@ router.post('/', withAuth, async (req, res) => {
 
   try {
     // * Create Recipe
-    const recipe = await Recipe.create(req.body);
+    const recipeData = {
+      user_id: req.session.id,
+      name: req.body.name,
+    };
+    const recipe = await Recipe.create(recipeData);
 
     // if there are ingredients create them and the relation to the recipe via recipe_ingredient
     if (req.body.ingredients.length) {
