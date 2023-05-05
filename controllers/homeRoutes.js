@@ -51,8 +51,7 @@ router.get('/recipes/:id', withAuth, async (req, res) => {
         {
           model: Ingredient,
           through: RecipeIngredient,
-          // attributes: ['unit', 'amount'],
-          as: 'recipe_ingredients',
+          as: 'ingredients',
         },
         {
           model: Step,
@@ -61,7 +60,7 @@ router.get('/recipes/:id', withAuth, async (req, res) => {
       ],
     });
 
-    const recipe = recipeData.get({ plain: true });
+    const recipe = await recipeData.get({ plain: true });
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
@@ -71,7 +70,7 @@ router.get('/recipes/:id', withAuth, async (req, res) => {
         },
       ],
     });
-    console.log(recipe);
+    console.log(recipe.ingredients);
     const user = userData.get({ plain: true });
     res.render('recipedisplay', {
       ...user,
