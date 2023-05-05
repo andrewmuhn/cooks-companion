@@ -4,6 +4,8 @@ const {
   RecipeIngredient,
   Ingredient,
   Recipe,
+  Step,
+  User,
 } = require('../models');
 
 router.get('/', async (req, res) => {
@@ -18,7 +20,14 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    const allRecipeData = await Recipe.findAll();
+    const allRecipeData = await Recipe.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
 
     const recipes = allRecipeData.map((recipe) =>
       recipe.get({ plain: true })
@@ -38,23 +47,28 @@ router.get('/recipe/:id', withAuth, async (req, res) => {
     const recipeData = await Recipe.findByPk(req.params.id, {
       include: [
         {
-          model: RecipeIngredients,
+          model: RecipeIngredient,
           attributes: ['units', 'amount'],
         },
         {
-          model: Ingredients,
-          through: RecipeIngredients,
+          model: Ingredient,
+          through: RecipeIngredient,
           attributes: ['name'],
+        },
+        {
+          model: Step,
+          attributes: ['step'],
         },
       ],
     });
+
+    const recipe = recipeData.get({ plain: true });
+    
     const allRecipeData = await Recipe.findAll();
 
     const allRecipes = allRecipeData.map((recipe) =>
-      project.get({ plain: true })
+      recipe.get({ plain: true })
     );
-
-    const recipe = recipeData.get({ plain: true });
     res.render('profile', {
       ...allRecipes,
       ...recipe,
