@@ -26,7 +26,7 @@ RecipeIngredient.init(
         key: 'id',
       },
     },
-    units: {
+    unit: {
       type: DataTypes.STRING,
       allowNull: false,
     },

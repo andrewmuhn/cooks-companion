@@ -35,9 +35,9 @@ router.put("/:id", withAuth, async (req, res) => {
   try {
     const updateIngredient = await Ingredient.update(
       {
-        id: req.body.id,
         name: req.body.name,
         unit: req.body.unit,
+        category: req.body.category,
       },
       {
         where: {
@@ -58,6 +58,8 @@ router.delete("/:id", withAuth, async (req, res) => {
         id: req.params.id,
       },
     });
+    // added the response -zach
+    res.status(200).json({ message: 'Success' });
   } catch (err) {
     res.status(500).json(err);
   }
