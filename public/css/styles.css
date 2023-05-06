@@ -33,6 +33,26 @@ h1 {
     
 }
 
+#welcome {
+    color: #dcc8b0
+}
+
+#RLname {
+    color: var(--tertiary);
+}
+
+.btn {
+  background-color: #dcc8b0;
+  border: none;
+  border-radius: 4px;
+  color: var(--tertiary);
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
 .no-button {
   background-color: #dcc8b0; /* Green */
   border: none;
