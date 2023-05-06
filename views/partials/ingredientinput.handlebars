@@ -1,0 +1,26 @@
+<div id="recipe-ingredients">
+                    <label for="inputIngredient">Ingredient:</label>
+                    <input type="text" name="inputText" id="inputText" />
+                
+                    <label for="inputNumber">Number:</label>
+                    <input type="number" id="inputNumber" name="inputNumber" />
+                
+                    {{!-- <label for="inputFraction">Fraction:</label>
+                    <input type="text" id="inputFraction" name="inputFraction" pattern="\d+/\d+" /> --}}
+                
+                    <label for="inputUnit">Units:</label>
+                    <input list="unitOptions" name="inputUnit" id="inputUnit" />
+                    <datalist id="unitOptions">
+
+                        <option value="tsp">
+                        <option value="tbsp">
+                        <option value="cup(s)">
+                        <option value="qt">
+                        <option value="gal">
+                        <option value="lb">
+                        <option value="oz">
+                        <option value="pinch">
+                    </datalist>
+                </div>
+                
+                <button id="add-ingredient">Add</button>

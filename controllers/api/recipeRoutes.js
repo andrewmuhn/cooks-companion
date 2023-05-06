@@ -66,8 +66,9 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', withAuth, async (req, res) => {
   // {
+  console.log('inside recipe post route');
+  console.log(req.session);
   //   name: 'Lasagna',
-  //   user_id: 3,
   //   ingredients: [
   //     {
   //       name: 'mozzerella cheese',
@@ -92,7 +93,7 @@ router.post('/', withAuth, async (req, res) => {
   try {
     // * Create Recipe
     const recipeData = {
-      user_id: req.session.id,
+      user_id: req.session.user_id,
       name: req.body.name,
     };
     const recipe = await Recipe.create(recipeData);
