@@ -81,6 +81,7 @@ router.get('/recipes/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get('/recipe_input', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -102,6 +103,7 @@ router.get('/recipe_input', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');
