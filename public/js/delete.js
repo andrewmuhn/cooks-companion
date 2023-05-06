@@ -1,5 +1,6 @@
 const delButtonHandler = async (event) => {
   event.preventDefault();
+  event.stopPropagation();
   console.log('inside delete function handler');
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
