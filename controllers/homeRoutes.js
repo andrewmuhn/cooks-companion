@@ -70,7 +70,7 @@ router.get('/recipes/:id', withAuth, async (req, res) => {
         },
       ],
     });
-    console.log(recipe.ingredients);
+    // console.log(recipe.ingredients);
     const user = userData.get({ plain: true });
     res.render('recipedisplay', {
       ...user,
@@ -93,7 +93,7 @@ router.get('/recipe_input', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log(user);
+    // console.log(user);
     res.render('recipeinput', {
       ...user,
       logged_in: true,
