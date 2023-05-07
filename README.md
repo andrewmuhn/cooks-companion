@@ -52,7 +52,7 @@
   ### Prerequisites <br>
   The following dependencies are needed to run the app on a local machine.
  
-"bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -110,7 +110,7 @@
 
 Geoff - [@GeoffLangWrites](https://twitter.com/GeoffLangWrites) - Geoffrey.langenberg@Gmail.com <br>
 Andrew- <br>
-Elissa- <br>
+Elissa- [elissamaine](https://github.com/elissamaine) - emaine97@yahoo.com <br>
 Zachary- <br>
 Seth - [@] (https://twitter.com/) -
 
