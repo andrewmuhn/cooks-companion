@@ -126,7 +126,11 @@ h1 {
   right: 0;
 }
 
-
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+}
 
 /* #login-nav {
     background-color: var(--secondary);
