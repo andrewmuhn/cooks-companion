@@ -60,10 +60,14 @@ h2 {
   color: var(--tertiary);
 }
 
+.ingredient-name {
+  margin: 8px;
+}
+
 .number-input {
   width: 10%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px ;
   box-sizing: border-box;
   border: 2px solid var(--tertiary);
   border-radius: 4px;
@@ -72,7 +76,7 @@ h2 {
 .unit-input {
   width: 20%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px ;
   box-sizing: border-box;
   border: 2px solid var(--tertiary);
   border-radius: 4px;
