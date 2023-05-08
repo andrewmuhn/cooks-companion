@@ -19,8 +19,8 @@
   </head>
 
   <body>
-    {{!-- <div class='flex-column justify-space-around'> --}}
-      {{!-- <div id='header'> --}}
+    <div class='flex-column justify-space-around'>
+      <div id='header'>
         <header
           class='display-flex justify-space-between align-left p-2' id='header'
         >
@@ -46,15 +46,15 @@
           </div>
         </header>
 
-      {{!-- </div> --}}
-      <main class='container-fluid d-flex mt-5'>
+      </div>
+      <main class='container-fluid mt-5'>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
       <footer>
 
       </footer>
-    {{!-- </div> --}}
+    </div>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
