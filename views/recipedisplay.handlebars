@@ -1,31 +1,32 @@
 <div class='row'>
-  <div class='col-auto'>
-    <h2>{{name}}!</h2>
+  <div class='container' id="background-font">
+    <h4 style="text-align: center;">{{name}}'s {{recipe.name}} Recipe</h4>
   </div>
 </div>
 
-<div class="col-md-4">
-  {{> recipeList }}
-</div>
-
-
-
-  <div class='col-md-6'>
-
-    <h3>{{recipe.name}}</h3>
-    <h4>Ingredients</h4>
-    <ul>
-        {{#each recipe.ingredients as |ingredient|}}
-        <li>{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
-        {{/each}}
-    </ul>
-    <h4>Steps</h4>
-    <ol>
-    {{#each recipe.steps as |step|}}
-        <li>{{step.step}}</li>
-    {{/each}}
-    </ol>
-
+<div class="row">
+  <div class="col-md-6 container">
+    {{> recipeList }}
   </div>
+
+
+
+  <div class='col-md-6 container' id="background-font">
+
+      <h3>{{recipe.name}}</h3>
+      <h5>Ingredients</h5>
+      <ul>
+          {{#each recipe.ingredients as |ingredient|}}
+          <li>{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
+          {{/each}}
+      </ul>
+      <h5>Steps</h5>
+      <ol>
+      {{#each recipe.steps as |step|}}
+          <li>{{step.step}}</li>
+      {{/each}}
+      </ol>
+  </div>
+</div>
 
 </div>
