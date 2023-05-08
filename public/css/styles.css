@@ -23,6 +23,14 @@ display: block;
   height: 150px;
 }
 
+#welcome:hover {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #e3d2be;
+  transition: 0.5s;
+  box-shadow: 0 1px 10px rgb(223, 34, 34);
+}
+
 header {
 display: flex;
 flex-wrap: wrap;
@@ -38,9 +46,14 @@ font-size: 2em;
 margin: 0.67em 0;
 }
 
+h2 {
+  margin: -40px 0px 0px 0px;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
 #header {
   background-color: var(--tertiary);
-  
 }
 
 #RLname {
@@ -194,6 +207,9 @@ right: 0;
     font-size: 1.5rem;
     line-height: 1.2;
   }
+  /* .h2 {
+    justify-content: center;
+  } */
 }
 
 /* .recipe-list {
