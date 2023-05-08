@@ -21,7 +21,6 @@
   padding: 20px;
   width: 200px;
   height: 150px;
-
 }
 
 header {
@@ -33,7 +32,6 @@ header {
   font-size: 20px;
 }
 
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -44,17 +42,13 @@ h1 {
     
 }
 
-/* #welcome {
-    color: #dcc8b0
-} */
-
 #RLname {
     color: var(--tertiary);
 }
 
 .btn {
   background-color: #dcc8b0;
-  border: none;
+  border: 2px solid var(--tertiary);
   border-radius: 4px;
   color: var(--tertiary);
   padding: 8px 15px;
@@ -76,6 +70,11 @@ h1 {
   font-size: 16px;
 }
 
+.no-button:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .profile {
   background-color: #dcc8b0; 
   border: none;
@@ -86,6 +85,12 @@ h1 {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.profile:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color:rgb(0, 0, 0);
 }
 
 .login {
