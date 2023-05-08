@@ -8,8 +8,8 @@
     background-color: #dcc8b0;
   }
 
-  main {
-  display: block;
+main {
+display: block;
 }
 
 #welcome {
@@ -24,26 +24,47 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  padding-top: 0px;
-  font-size: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+padding-top: 0px;
+font-size: 20px;
 }
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+font-size: 2em;
+margin: 0.67em 0;
 }
 
 #header {
-    background-color: var(--tertiary);
-    
+  background-color: var(--tertiary);
+  
 }
 
 #RLname {
-    color: var(--tertiary);
+  color: var(--tertiary);
+}
+
+.form-input {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 2px solid var(--tertiary);
+border-radius: 4px;
+}
+
+.recipe-input {
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 2px solid var(--tertiary);
+border-radius: 4px;
+}
+
+#recipe-steps {
+width: 80%;
 }
 
 .form-input {
@@ -68,15 +89,15 @@ h1 {
 }
 
 .btn {
-  background-color: #dcc8b0;
-  border: 2px solid var(--tertiary);
-  border-radius: 4px;
-  color: var(--tertiary);
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
+background-color: #dcc8b0;
+border: 2px solid var(--tertiary);
+border-radius: 4px;
+color: var(--tertiary);
+padding: 8px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
 }
 
 .no-button {
@@ -92,8 +113,8 @@ h1 {
 }
 
 .no-button:hover {
-  font-weight: bold;
-  text-decoration: underline;
+font-weight: bold;
+text-decoration: underline;
 }
 
 .profile {
@@ -109,9 +130,9 @@ h1 {
 }
 
 .profile:hover {
-  font-weight: bold;
-  text-decoration: underline;
-  color:rgb(0, 0, 0);
+font-weight: bold;
+text-decoration: underline;
+color:rgb(0, 0, 0);
 }
 
 .login {
@@ -129,28 +150,28 @@ h1 {
 }
 
 .login span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
 }
 
 .login span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
 }
 
 .login:hover span {
-  padding-right: 25px;
+padding-right: 25px;
 }
 
 .login:hover span:after {
-  opacity: 1;
-  right: 0;
+opacity: 1;
+right: 0;
 }
 
 /* .recipe-list {
@@ -160,8 +181,8 @@ h1 {
 } */
 
 /* #login-nav {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 } */
 /* #welcome {
-    background-color: burlywood;
+  background-color: burlywood;
 } */
