@@ -46,6 +46,27 @@ h1 {
     color: var(--tertiary);
 }
 
+.form-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--tertiary);
+  border-radius: 4px;
+}
+
+.recipe-input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--tertiary);
+  border-radius: 4px;
+}
+
+#recipe-steps {
+  width: 80%;
+}
+
 .btn {
   background-color: #dcc8b0;
   border: 2px solid var(--tertiary);
