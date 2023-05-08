@@ -8,8 +8,8 @@
     background-color: var(--primary);
   }
 
-  main {
-  display: block;
+main {
+display: block;
 }
 
 #welcome {
@@ -20,27 +20,35 @@
   padding: 20px;
   width: 200px;
   height: 150px;
+}
 
+#welcome:hover {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #e3d2be;
+  transition: 0.5s;
+  box-shadow: 0 1px 10px rgb(223, 34, 34);
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  padding-top: 0px;
-  font-size: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+padding-top: 0px;
+font-size: 20px;
 }
-
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+font-size: 2em;
+margin: 0.67em 0;
 }
 
-#header {
-    background-color: var(--tertiary);
-    
+h2 {
+  margin: -40px 0px 0px 0px;
+  font-size: 35px;
+  text-decoration: underline;
 }
 
 #welcome {
@@ -88,6 +96,7 @@ width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+
   border: 2px solid var(--tertiary);
   border-radius: 4px;
 }
@@ -132,6 +141,7 @@ font-size: 14px;
   border: none;
   border-radius: 5px 5px 5px 5px;
   color: var(--tertiary);
+
   padding: 8px 15px;
   text-align: center;
   text-decoration: none;
@@ -150,8 +160,6 @@ text-decoration: underline;
   border-color: var(--quaternary);
 
 }
-
-
 
 .profile {
   background-color: var(--primary); 
@@ -259,8 +267,8 @@ h4 {
 } */
 
 /* #login-nav {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 } */
 /* #welcome {
-    background-color: burlywood;
+  background-color: burlywood;
 } */

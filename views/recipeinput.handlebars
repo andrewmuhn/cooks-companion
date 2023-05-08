@@ -2,6 +2,7 @@
 
 
 
+
 <div class="row">
     <div class="container" id="background-font">
         <h4 style="text-align: center;">Welcome, {{name}}!</h4>
@@ -21,19 +22,19 @@
             <div class="form-group">
 
                 <label for="recipe-name">Recipe Name:</label>
-                <input type="text" name="recipe-name" id="recipe-name"/>
+                <input type="text" name="recipe-name" id="recipe-name" class="recipe-input"/>
 
                 
                 <div id="ingredient-container">
                     <div>
                     <label for="ingredient-name0">Ingredient:</label>
-                    <input type="text" name="ingredient" id="ingrident-name0" class="ingredient-name" />
+                    <input type="text" name="ingredient" id="ingrident-name0" class="ingredient-name recipe-input" />
                 
                     <label for="number-input0">Number:</label>
-                    <input type="number" id="number-input0" name="number" class="number-input"/>
+                    <input type="number" id="number-input0" name="number" class="number-input recipe-input num-units"/>
                 
                     <label for="unit-input0">Units:</label>
-                    <input list="unit-options0" name="unit" id="unit-input0" class="unit-input" />
+                    <input list="unit-options0" name="unit" id="unit-input0" class="unit-input recipe-input num-units" />
                     <datalist id="unit-options0">
                         <option value="tsp">
                         <option value="tbsp">
@@ -49,17 +50,19 @@
                 </div>
                 {{!-- <div id="ingredient-container"></div> --}}
                 
-                <button id="add-ingredient">Add Another Ingredient</button>
+                <button id="add-ingredient" class="btn btn-danger">Add Another Ingredient</button> 
 
                 <div id="step-container">
-                <label for="recipe-instructions">Instructions:</label>
-                <input class="form-input" type="text" id="recipe-steps" name="step" />
+                <label for="recipe-instructions">Instructions:</label> <br>
+                <input class="recipe-input" type="text" id="recipe-steps" name="step" />
                 </div>
                 {{!-- <div ></div> --}}
-                <button id="add-step">Add Step</button>
+                <button id="add-step" class="btn btn-danger">Add Another Step</button>
 
-
-                <button id='create-recipe' type="submit" class="btn btn-primary">Create</button>
+                <div class="row justify-content-center">
+                   <button id='create-recipe' type="submit" class="btn btn-danger">Create</button> 
+                </div>
+                
             </div>
 
             {{!-- <div class="form-group">

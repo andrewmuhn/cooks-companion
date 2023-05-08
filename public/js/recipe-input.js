@@ -25,6 +25,7 @@ const addIngredient = (event) => {
   ingredientInput.class = 'ingredient-name';
   ingredientInput.type = 'text';
   ingredientInput.name = 'ingredient';
+  ingredientInput.setAttribute('class', 'recipe-input');
 
   let ingredientLabel = document.createElement('label');
   ingredientLabel.setAttribute =
@@ -36,6 +37,10 @@ const addIngredient = (event) => {
   numberInput.class = 'number-input';
   numberInput.type = 'number';
   numberInput.name = 'number';
+  numberInput.setAttribute('class', 'recipe-input');
+  numberInput.setAttribute('class', 'number-input');
+  
+  
 
   let numberLabel = document.createElement('label');
   numberLabel.setAttribute =
@@ -47,6 +52,8 @@ const addIngredient = (event) => {
   unitInput.class = 'unit-input';
   unitInput.setAttribute('list', 'unit-options' + ingredientInstance);
   unitInput.name = 'unit';
+  unitInput.setAttribute('class', 'recipe-input');
+  unitInput.setAttribute('class', 'unit-input');
 
   let unitOptions = document.createElement('datalist');
   unitOptions.id = 'unit-options' + ingredientInstance;
@@ -80,6 +87,9 @@ const addStep = (event) => {
   instructionStep.type = 'text';
   instructionStep.name = 'step';
   instructionStep.id = 'recipe-step' + instructionInstance;
+  instructionStep.classList.add('recipe-input');
+  instructionStep.setAttribute('class', 'recipe-input');
+  instructionStep.setAttribute('id', 'recipe-steps');
 
   let stepContainer = document.createElement('div');
   stepContainer.appendChild(instructionStep);
