@@ -1,16 +1,16 @@
-<div class="row mt-4">
+<div class="row justify-content-center mt-4">
 
     {{#if recipes.length}}
-    <div class="col-md-6 recipe-list">
+    <div class="recipe-list justify-content-center">
         <h3>Saved Recipes:</h3>
 
         {{#each recipes as |recipe|}}
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <h3><a id="RLname" href="/recipes/{{recipe.id}}" onclick="event.stopPropagation();">{{recipe.name}}</a></h3>
+        <div class="row mb-2 align-items-center">
+            <div class="col-6 align-self-start">
+                <h3><a id="RLname" href="/recipes/{{recipe.id}}" onclick="event.stopPropagation();" class="text-nowrap">{{recipe.name}}</a></h3>
             </div>
-            <div class="col-md-4">
-                <button class="btn btn-sm btn-danger" data-id="{{recipe.id}}">DELETE</button>
+            <div class="col-4">
+                <button class="btn btn-sm btn-danger my-auto" data-id="{{recipe.id}}">DELETE</button>
             </div>
         </div>
         {{/each}}
