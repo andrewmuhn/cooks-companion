@@ -1,20 +1,16 @@
-
-
-
-
-<div class="row">
-    <div class="col-auto">
-        <h2>Welcome, {{name}}!</h2>
-    </div>
+<div class='row justify-content-center'>
+  <div class='col-auto text-center'>
+    <h2>Welcome, {{name}}!</h2>
+  </div>
 </div>
 
-<div class="row mt-4">
-    <div class="col-2">
+<div class="row  mt-4">
+    <div class="col-lg-4 col-md-12 col-sm-12 align-self-start p-4">
         {{> recipeList }}
     </div>
  
     
-    <div class="col-8 col-md-12">
+    <div class="col-lg-8 col-md-12 col-sm-12 align-self-end ">
         <h3>Create a New Recipe:</h3>
 
         <form class="form new-recipe-form">
@@ -30,10 +26,10 @@
                     <input type="text" name="ingredient" id="ingrident-name0" class="ingredient-name recipe-input" />
                 
                     <label for="number-input0">Number:</label>
-                    <input type="number" id="number-input0" name="number" class="number-input recipe-input"/>
+                    <input type="number" id="number-input0" name="number" class="number-input recipe-input num-units"/>
                 
                     <label for="unit-input0">Units:</label>
-                    <input list="unit-options0" name="unit" id="unit-input0" class="unit-input recipe-input" />
+                    <input list="unit-options0" name="unit" id="unit-input0" class="unit-input recipe-input num-units" />
                     <datalist id="unit-options0">
                         <option value="tsp">
                         <option value="tbsp">
