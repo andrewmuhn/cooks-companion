@@ -60,25 +60,22 @@ h2 {
   color: var(--tertiary);
 }
 
-.form-input {
-width: 100%;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
-border: 2px solid var(--tertiary);
-border-radius: 4px;
+.number-input {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--tertiary);
+  border-radius: 4px;
 }
 
-.recipe-input {
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
-border: 2px solid var(--tertiary);
-border-radius: 4px;
-}
-
-#recipe-steps {
-width: 80%;
+.unit-input {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--tertiary);
+  border-radius: 4px;
 }
 
 .form-input {
@@ -96,7 +93,11 @@ width: 80%;
   box-sizing: border-box;
   border: 2px solid var(--tertiary);
   border-radius: 4px;
-} 
+}
+
+#recipe-steps {
+  width: 80%;
+}
 
 #recipe-steps {
   width: 80%;
@@ -113,15 +114,15 @@ width: 80%;
 }
 
 .btn {
-background-color: #dcc8b0;
-border: 2px solid var(--tertiary);
-border-radius: 4px;
-color: var(--tertiary);
-padding: 8px 15px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 14px;
+  background-color: #dcc8b0;
+  border: 2px solid var(--tertiary);
+  border-radius: 4px;
+  color: var(--tertiary);
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
 }
 
 .no-button {
@@ -137,8 +138,8 @@ font-size: 14px;
 }
 
 .no-button:hover {
-font-weight: bold;
-text-decoration: underline;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .profile {
@@ -154,9 +155,9 @@ text-decoration: underline;
 }
 
 .profile:hover {
-font-weight: bold;
-text-decoration: underline;
-color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: underline;
+  color:rgb(0, 0, 0);
 }
 
 .login {
@@ -174,28 +175,28 @@ color:rgb(0, 0, 0);
 }
 
 .login span {
-cursor: pointer;
-display: inline-block;
-position: relative;
-transition: 0.5s;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
 .login span:after {
-content: '\00bb';
-position: absolute;
-opacity: 0;
-top: 0;
-right: -20px;
-transition: 0.5s;
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
 .login:hover span {
-padding-right: 25px;
+  padding-right: 25px;
 }
 
 .login:hover span:after {
-opacity: 1;
-right: 0;
+  opacity: 1;
+  right: 0;
 }
 
 @media (max-width: 805px) {

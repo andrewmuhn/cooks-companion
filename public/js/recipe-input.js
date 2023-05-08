@@ -38,6 +38,9 @@ const addIngredient = (event) => {
   numberInput.type = 'number';
   numberInput.name = 'number';
   numberInput.setAttribute('class', 'recipe-input');
+  numberInput.setAttribute('class', 'number-input');
+  
+  
 
   let numberLabel = document.createElement('label');
   numberLabel.setAttribute =
@@ -50,6 +53,7 @@ const addIngredient = (event) => {
   unitInput.setAttribute('list', 'unit-options' + ingredientInstance);
   unitInput.name = 'unit';
   unitInput.setAttribute('class', 'recipe-input');
+  unitInput.setAttribute('class', 'unit-input');
 
   let unitOptions = document.createElement('datalist');
   unitOptions.id = 'unit-options' + ingredientInstance;

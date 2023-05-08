@@ -21,7 +21,9 @@
   <body>
     <div class='flex-column justify-space-around'>
       <div id='header'>
-        <header class='display-flex justify-space-between p-2'>
+        <header
+          class='display-flex justify-space-between align-left p-2' id='header'
+        >
           <h1>
             <a id='welcome' href='/'>Welcome to Cooks Companion</a>
           </h1>
@@ -45,7 +47,7 @@
         </header>
 
       </div>
-      <main class='container container-fluid mt-5'>
+      <main class='container-fluid mt-5'>
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
