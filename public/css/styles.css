@@ -27,7 +27,7 @@ display: block;
   font-weight: bold;
   background-color: #e3d2be;
   transition: 0.5s;
-  box-shadow: 0 1px 10px rgb(223, 34, 34);
+  box-shadow: 0 1px 10px var(--tertiary);
 }
 
 header {
