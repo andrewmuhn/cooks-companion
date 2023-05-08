@@ -2,6 +2,7 @@
     --primary: rgb(52, 169, 120);
     --secondary: rgb(179, 220, 175);
     --tertiary: rgb(191, 91, 91);
+    --quaternary: #ad9b85;
   }
   body {
     background-color: #dcc8b0;
@@ -14,9 +15,9 @@
 #welcome {
   /* background-color: aqua; */
   font-family:Arial, Helvetica, sans-serif;
-  border-radius: 15px 50px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
   background: #dcc8b0;
-  color: #FFFFFF;
+  color: black;
   padding: 20px;
   width: 200px;
   height: 150px;
@@ -43,9 +44,9 @@ h1 {
     
 }
 
-#welcome {
+/* #welcome {
     color: #dcc8b0
-}
+} */
 
 #RLname {
     color: var(--tertiary);
@@ -66,8 +67,8 @@ h1 {
 .no-button {
   background-color: #dcc8b0; /* Green */
   border: none;
-  border-radius: 5px 25px 5px 5px;
-  color: white;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
   padding: 8px 15px;
   text-align: center;
   text-decoration: none;
@@ -78,8 +79,8 @@ h1 {
 .profile {
   background-color: #dcc8b0; 
   border: none;
-  border-radius: 25px 5px 5px 5px;
-  color: white;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
   padding: 8px 15px;
   text-align: center;
   text-decoration: none;
@@ -88,10 +89,10 @@ h1 {
 }
 
 .login {
-  border-radius: 25px 25px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
   background-color: #dcc8b0;
   border: none;
-  color: #FFFFFF;
+  color: black;
   text-align: center;
   font-size: 20px;
   padding: 10px;
@@ -126,11 +127,11 @@ h1 {
   right: 0;
 }
 
-.recipe-list {
+/* .recipe-list {
   display: flex;
   flex-direction: column;
   max-width: 25%;
-}
+} */
 
 /* #login-nav {
     background-color: var(--secondary);
