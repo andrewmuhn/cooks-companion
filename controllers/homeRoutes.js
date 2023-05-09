@@ -72,14 +72,10 @@ router.get('/recipes/:id', withAuth, async (req, res) => {
     });
     const user = userData.get({ plain: true });
 
-    const metricCheckboxChecked =
-      req.query.metricCheckbox === 'true' || false;
-
     res.render('recipedisplay', {
       ...user,
       recipe,
       logged_in: true,
-      checkbox_checked: metricCheckboxChecked, // Pass the checkbox status to the view
     });
   } catch (err) {
     res.status(500).json(err);

@@ -22,11 +22,8 @@
     </div>
     <ul>
         {{#each recipe.ingredients as |ingredient|}}
-        {{#if checkbox_checked }}
-        <li class="ingredient">{{convert_units ingredient.recipe_ingredient.amount ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
-        {{else}}
-        <li class="ingredient">{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
-        {{/if}}
+        <li class="ingredient-metric none">{{convert_units ingredient.recipe_ingredient.amount ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
+        <li class="ingredient-imperial">{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
         {{/each}}
     </ul>
     <h4>Steps</h4>
@@ -38,8 +35,4 @@
 
   </div>
 </div>
-{{!-- <script>
-    const checkboxChecked = document.getElementById('metricCheckbox');
-    console.log(checkboxChecked);
-</script> --}}
-<script src="../js/recipe-display-metric.js"></script>
+<script src="../js/recipe-display.js"></script>

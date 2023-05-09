@@ -2,9 +2,6 @@ const convert = require('convert-units');
 
 module.exports = {
   convert_units: (amount, unit) => {
-    console.log('inside helper');
-    console.log(amount);
-    console.log(unit);
     switch (unit) {
       case 'tsp':
         console.log(convert(amount).from(unit).to('ml'));
@@ -38,15 +35,6 @@ module.exports = {
 
       default:
         return `${amount}  ${unit}`;
-    }
-  },
-  isChecked: (checkbox_checked) => {
-    console.log('inside isChecked function');
-    console.log(checkbox_checked);
-    if (checkbox_checked === true) {
-      return true;
-    } else {
-      return false;
     }
   },
 };
