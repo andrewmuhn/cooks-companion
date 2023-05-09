@@ -1,16 +1,21 @@
-<div class='row justify-content-center'>
-  <div class='col-auto text-center'>
-    <h2>Welcome, {{name}}!</h2>
-  </div>
+
+
+
+
+
+<div class="row">
+    <div class="container" id="background-font">
+        <h4 style="text-align: center;">Welcome, {{name}}!</h4>
+    </div>
 </div>
 
-<div class="row  mt-4">
-    <div class="col-lg-4 col-md-12 col-sm-12 align-self-start p-4">
+<div class="row mt-4">
+    <div class="col-sm-4">
         {{> recipeList }}
     </div>
  
     
-    <div class="col-lg-8 col-md-12 col-sm-12 align-self-end ">
+    <div class="col-md-6" id="background-font">
         <h3>Create a New Recipe:</h3>
 
         <form class="form new-recipe-form">

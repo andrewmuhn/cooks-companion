@@ -1,6 +1,8 @@
-<div class='row justify-content-center'>
-  <div class='col-auto text-center'>
-    <h2>{{name}}'s {{recipe.name}}</h2>
+
+<div class='row'>
+  <div class='container' id="background-font">
+    <h4 style="text-align: center;">{{name}}'s {{recipe.name}} Recipe</h4>
+
   </div>
 </div>
 
@@ -9,7 +11,9 @@
     {{> recipeList }}
   </div>
 
-  <div class='col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start'>
+  <div class='col-md-6' id="background-font">
+
+    {{!-- <h3>{{recipe.name}}</h3> --}}
     <br>
     <h4>Ingredients</h4>
     <ul>
@@ -23,5 +27,9 @@
       <li>{{step.step}}</li>
       {{/each}}
     </ol>
+
   </div>
+
+</div>
+
 </div>
