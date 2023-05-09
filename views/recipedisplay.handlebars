@@ -7,27 +7,28 @@
 </div>
 
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-6">
     {{> recipeList }}
   </div>
+<div class="col-md-6"> 
+    <div class='row mt-4' id="background-font">
+      <div>
+      {{!-- <h3>{{recipe.name}}</h3> --}}
+      <br>
+      <h4>Ingredients</h4>
+      <ul>
+        {{#each recipe.ingredients as |ingredient|}}
+        <li>{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
+        {{/each}}
+      </ul>
+      <h4>Steps</h4>
+      <ol>
+        {{#each recipe.steps as |step|}}
+        <li>{{step.step}}</li>
+        {{/each}}
+      </ol>
 
-  <div class='col-md-6' id="background-font">
-
-    {{!-- <h3>{{recipe.name}}</h3> --}}
-    <br>
-    <h4>Ingredients</h4>
-    <ul>
-      {{#each recipe.ingredients as |ingredient|}}
-      <li>{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
-      {{/each}}
-    </ul>
-    <h4>Steps</h4>
-    <ol>
-      {{#each recipe.steps as |step|}}
-      <li>{{step.step}}</li>
-      {{/each}}
-    </ol>
-
+  </div>
   </div>
 
 </div>

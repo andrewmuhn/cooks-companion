@@ -1,4 +1,4 @@
-<div class="row mt-4" >
+<div class="row mt-4 container" >
     {{#if recipes.length}}
     
     <div class="recipe-list justify-content-center" id="background-font">
@@ -6,7 +6,7 @@
 
         {{#each recipes as |recipe|}}
         <div class="row mb-2">
-            <div class="col-auto">
+            <div class="col-6">
                 <h3><a id="RLname" href="/recipes/{{recipe.id}}" onclick="event.stopPropagation();">{{recipe.name}}</a></h3>
             </div>
             <div class="col-4">

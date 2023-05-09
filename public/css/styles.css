@@ -78,7 +78,7 @@ h4 {
 /* } */ 
 
 
-.number-input {
+.number-input, .unit-input {
   width: 10%;
   padding: 12px 20px;
   margin: 8px ;
@@ -146,7 +146,7 @@ border-radius: 4px;
 }
 
 #recipe-steps {
-  width: 80%;
+  width: 60%;
 }
 
 #add-ingredient {
@@ -255,7 +255,7 @@ color:var(--tertiary);
 }
 /* login page */
 .form-group label {
-  display: block;
+  display: inline;
   margin-bottom: 5px;
 }
 
@@ -283,13 +283,11 @@ color:var(--tertiary);
   padding: 10px;
   min-width: 50%;
 }
-
-/* .d-flex.flex-column.justify-content-center.align-items-center.align-items-md-start {
-  /* background-color: var(--tertiary); */
-  /* border-radius: 10px;
-  margin: 10px; */
-  /* opacity: 85%; */
-/* } */ 
+ /* .d-flex.flex-column.justify-content-center.align-items-center.align-items-md-start {
+   background-color: var(--tertiary); 
+   border-radius: 10px; 
+  margin: 10px; 
+  opacity: 85%; }   */
 
 @media (max-width: 805px) {
   header {
