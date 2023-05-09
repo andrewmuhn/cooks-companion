@@ -14,9 +14,14 @@ router.post('/', async (req, res) => {
     //         { message: 'You must enter a valid username and password.' });
     //     return;
     // }
+    const dataJustCreated = await User.findOne({
+      where: { email: newUserData.email },
+    });
+    console.log(dataJustCreated);
     req.session.save(() => {
-      (req.session.logged_in = true),
-        res.status(200).json(newUserData);
+      req.session.user_id = dataJustCreated.id;
+      req.session.logged_in = true;
+      res.status(200).json(newUserData);
     });
   } catch (err) {
     res.status(500).json(err);
@@ -41,7 +46,6 @@ router.post('/login', async (req, res) => {
     const userInput = await User.findOne({
       where: { email: req.body.email },
     });
-    console.log('44');
     if (!userInput) {
       res
         .status(400)
