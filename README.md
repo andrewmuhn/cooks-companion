@@ -33,7 +33,7 @@
   ## About The Project
   ### Project Image  
   ![product-screenshot](https://github.com/andrewmuhn/cooks-companion/blob/main/images/example.png)<br>
-  Cooks Companion is you're own personal recipe app. With the ability to save, create, and edit recipe's to your own profile. It uses an sql database to store information and displays full recipe pages including ingredients, amounts, and individual steps. It come outfitted with an easy to use Recipe creation template, recipe display, recipe list and profile page that gives quick and easy access to your recipes. 
+  Cooks Companion is your own personal recipe app. With the ability to save, create, and edit recipe's to your own profile. It uses an sql database to store information and displays full recipe pages including ingredients, amounts, and individual steps. It come outfitted with an easy to use Recipe creation template, recipe display, recipe list and profile page that gives quick and easy access to your recipes. 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
