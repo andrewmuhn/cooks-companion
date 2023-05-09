@@ -10,12 +10,13 @@
 </div>
 
 <div class="row mt-4">
-    <div class="col-sm-4">
-        {{> recipeList }}
+        <div class="col-md-6" >
+            <div class="container" id="recipe-list-input">
+            {{> recipeList }}
+        </div>
     </div>
- 
     
-    <div class="col-md-6" id="background-font">
+    <div class="col-md-6" id="background-font" >
         <h3>Create a New Recipe:</h3>
 
         <form class="form new-recipe-form">
@@ -37,7 +38,7 @@
                     <input list="unit-options0" name="unit" id="unit-input0" class="unit-input recipe-input num-units" />
                     <datalist id="unit-options0">
                         <option value="tsp">
-                        <option value="Tbs">
+                        <option value="tbsp">
                         <option value="cup(s)">
                         <option value="qt">
                         <option value="gal">
