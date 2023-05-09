@@ -21,13 +21,17 @@
         <label class="form-check-label" for="metricCheckbox">Metric</label>
     </div>
     <ul>
-
         {{#each recipe.ingredients as |ingredient|}}
         <li class="ingredient-metric none">{{convert_units ingredient.recipe_ingredient.amount ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
         <li class="ingredient-imperial">{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
         {{/each}}
-      </ol>
-
+    </ul>
+    <h4>Steps</h4>
+    <ol>
+      {{#each recipe.steps as |step|}}
+      <li>{{step.step}}</li>
+      {{/each}}
+    </ol>
 
 </div>
 
