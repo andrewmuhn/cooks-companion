@@ -1,11 +1,16 @@
 :root {
-    --primary: #d7ccbf;
+    --primary: #f4eadf;
     --secondary: rgb(179, 220, 175);
-    --tertiary: #634c4f;
+    --tertiary: #7d5d61;
     --quaternary: #ad9b85;
   }
   body {
     background-color: var(--primary);
+  }
+  img {
+    opacity: 50%;
+    border-color: var(--tertiary);
+    border-radius: 30px;
   }
 
 main {
@@ -25,7 +30,7 @@ display: block;
 }
 /* welcome btn hover */
 #welcome:hover {
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: bold;
   background-color: #e3d2be;
   transition: 0.5s;
@@ -83,7 +88,7 @@ h4 {
 
 
 .number-input, .unit-input {
-  width: 10%;
+  width: 13%;
   padding: 12px 20px;
   margin: 8px ;
   box-sizing: border-box;
@@ -144,6 +149,8 @@ border-radius: 4px;
 .maker-names {
   text-align: center;
   font-size: 20px;
+  padding: 20px;
+  text-decoration: underline;
 
 }
 
@@ -303,7 +310,7 @@ color:var(--tertiary);
    background-color: var(--tertiary); 
    border-radius: 10px; 
   margin: 10px; 
-  opacity: 85%; }  
+  opacity: 90%; }  
 
 @media (max-width: 805px) {
   header {
