@@ -2,7 +2,7 @@ let ingredientInstance = 1;
 let instructionInstance = 1;
 const unitOptionsArr = [
   'tsp',
-  'tbsp',
+  'Tbs',
   'cup(s)',
   'qt',
   'gal',

@@ -22,7 +22,7 @@ const recipeIngredientData = [
   {
     recipe_id: 2,
     ingredient_id: 3,
-    unit: 'num',
+    unit: '',
     amount: 1,
   },
 ];
