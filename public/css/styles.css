@@ -137,6 +137,10 @@ border-radius: 4px;
   margin: auto;
   color: var(--primary);
 }
+.maker-names {
+  text-align: center;
+  
+}
 
 #recipe-list-container {
   align-items: center;
