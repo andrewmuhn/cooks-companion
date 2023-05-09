@@ -125,7 +125,9 @@ border-radius: 4px;
   margin-bottom: 10px;
 } */
 
-
+.none {
+  display: none;
+}
 
 #background-font {
   align-items: center;
