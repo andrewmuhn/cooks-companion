@@ -7,39 +7,40 @@
 </div>
 
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-6">
     {{> recipeList }}
   </div>
-
-  <div class='col-md-6' id="background-font">
-
-    {{!-- <h3>{{recipe.name}}</h3> --}}
-    <br>
-    <h4>Ingredients</h4>
-    <div class="form-check form-switch">
+  
+    <div class='col-md-4 d-flex flex-column justify-content-center align-items-center align-items-md-start' id="background-font">
+    
+      {{!-- <h3>{{recipe.name}}</h3> --}}
+      <br>
+      <h4>Ingredients</h4>
+      <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" role="switch" id="metricCheckbox" name="metricCheckbox">
         <label class="form-check-label" for="metricCheckbox">Metric</label>
     </div>
     <ul>
-        {{#each recipe.ingredients as |ingredient|}}
-        {{#if checkbox_checked }}
+          {{#each recipe.ingredients as |ingredient|}}
+          {{#if checkbox_checked }}
         <li class="ingredient">{{convert_units ingredient.recipe_ingredient.amount ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
         {{else}}
         <li class="ingredient">{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
-        {{/if}}
+          {{/if}}
         {{/each}}
-    </ul>
-    <h4>Steps</h4>
-    <ol>
-      {{#each recipe.steps as |step|}}
-      <li>{{step.step}}</li>
-      {{/each}}
-    </ol>
+      </ul>
+      <h4>Steps</h4>
+      <ol>
+        {{#each recipe.steps as |step|}}
+        <li>{{step.step}}</li>
+        {{/each}}
+      </ol>
 
-  </div>
+
 </div>
 {{!-- <script>
     const checkboxChecked = document.getElementById('metricCheckbox');
     console.log(checkboxChecked);
 </script> --}}
 <script src="../js/recipe-display-metric.js"></script>
+
