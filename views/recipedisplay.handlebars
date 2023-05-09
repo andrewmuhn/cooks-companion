@@ -16,10 +16,17 @@
     {{!-- <h3>{{recipe.name}}</h3> --}}
     <br>
     <h4>Ingredients</h4>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="metricCheckbox" name="metricCheckbox">
+        <label class="form-check-label" for="metricCheckbox">Metric</label>
+    </div>
     <ul>
-      {{#each recipe.ingredients as |ingredient|}}
-      <li>{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
-      {{/each}}
+        {{#each recipe.ingredients as |ingredient|}}
+        <li class="ingredient">{{convert_units ingredient.recipe_ingredient.amount ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
+        {{else}}
+        <li class="ingredient">{{ingredient.recipe_ingredient.amount}} {{ingredient.recipe_ingredient.unit}} {{ingredient.name}}</li>
+        {{/if}}
+        {{/each}}
     </ul>
     <h4>Steps</h4>
     <ol>
@@ -29,7 +36,9 @@
     </ol>
 
   </div>
-
 </div>
-
-</div>
+{{!-- <script>
+    const checkboxChecked = document.getElementById('metricCheckbox');
+    console.log(checkboxChecked);
+</script> --}}
+<script src="../js/recipe-display-metric.js"></script>
