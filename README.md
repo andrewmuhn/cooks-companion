@@ -40,7 +40,9 @@
   
   ### Built With
   
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
   
   
   
@@ -54,6 +56,7 @@
  
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
+    "convert-units": "^2.3.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
@@ -109,7 +112,7 @@
 ## Contact
 
 Geoff - [@GeoffLangWrites](https://twitter.com/GeoffLangWrites) - Geoffrey.langenberg@Gmail.com <br>
-Andrew- <br>
+Andrew- [andrewmuhn](https://github.com/andrewmuhn) - andrewmuhn@gmail.com <br>
 Elissa- [elissamaine](https://github.com/elissamaine) - emaine97@yahoo.com <br>
 Zachary- <br>
 Seth - [@] (https://twitter.com/) -
@@ -121,3 +124,9 @@ Project Link: [https://github.com/andrewmuhn/cooks-companion](https://github.com
   
   <!-- ACKNOWLEDGMENTS -->
   ## Acknowledgments
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
