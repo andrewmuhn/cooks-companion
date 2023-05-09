@@ -285,11 +285,11 @@ color:var(--tertiary);
   padding: 10px;
   min-width: 50%;
 }
- /* .d-flex.flex-column.justify-content-center.align-items-center.align-items-md-start {
+ .d-flex.flex-column.justify-content-center.align-items-center.align-items-md-start {
    background-color: var(--tertiary); 
    border-radius: 10px; 
   margin: 10px; 
-  opacity: 85%; }   */
+  opacity: 85%; }  
 
 @media (max-width: 805px) {
   header {
