@@ -114,7 +114,7 @@
 Geoff - [@GeoffLangWrites](https://twitter.com/GeoffLangWrites) - Geoffrey.langenberg@Gmail.com <br>
 Andrew- [andrewmuhn](https://github.com/andrewmuhn) - andrewmuhn@gmail.com <br>
 Elissa- [elissamaine](https://github.com/elissamaine) - emaine97@yahoo.com <br>
-Zachary- <br>
+Zachary- [lyskizach](https://github.com/lyskizach) - lyski.zach@icloud.com <br>
 Seth - [@] (https://twitter.com/) -
 
 Project Link: [https://github.com/andrewmuhn/cooks-companion](https://github.com/andrewmuhn/cooks-companion)
