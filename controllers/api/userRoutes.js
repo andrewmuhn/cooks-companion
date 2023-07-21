@@ -9,11 +9,11 @@ router.post('/', async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
-    // if (!newUserData) {
-    //     res.status(400).json(
-    //         { message: 'You must enter a valid username and password.' });
-    //     return;
-    // }
+    if (!newUserData) {
+        res.status(400).json(
+            { message: 'You must enter a valid username and password.' });
+        return;
+    }
     const dataJustCreated = await User.findOne({
       where: { email: newUserData.email },
     });
