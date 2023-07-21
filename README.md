@@ -108,6 +108,7 @@ Cooks Companion is your own personal recipe app. With the ability to save, creat
 
 ## Contact
 
+
 Geoffrey Langenberg - [GgeoffG](https://github.com/GgeoffG) - Geoffrey.langenberg@gmail.com <br>
 Zach Lyski - [lyskizach](https://github.com/lyskizach) - lyski.zach@icloud.com <br>
 Andrew Muhn - [andrewmuhn](https://github.com/andrewmuhn) - andrewmuhn@gmail.com <br>
